@@ -2,4 +2,29 @@
                 background: linear-gradient(rgba(255,0,0,0.5), rgba(255,0,0,0.5)), url('../images/banner.png') no-repeat;
                 background-size: cover;
                 height: 1200px;
+                color: #fff;
+                position: relative;
+
+                .text-bloc {
+                                //@include flexbox();
+                                //@include justify-content (center) ;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+
+                                .cta-bloc {
+                                                margin: 20px 0;
+                                                .button {
+                                                                @extend %button;
+                                                                &:active, &:hover {
+                                                                                background: green;
+                                                                                border-color: green;
+                                                                }
+                                                }
+                                }
+
+                                
+                                
+                }
 }

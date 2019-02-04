@@ -43,19 +43,54 @@ table {
   border-spacing: 0; }
 
 html, body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  -webkit-tap-highlight-color: transparent; }
+
+h1 {
+  font-size: 65px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+h4 {
+  font-size: 34px;
+  font-weight: 500; }
 
 /* COMPONENTS */
 .banner {
   background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url("../images/banner.png") no-repeat;
   background-size: cover;
-  height: 1200px; }
+  height: 1200px;
+  color: #fff;
+  position: relative; }
+  .banner .text-bloc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .banner .text-bloc .cta-bloc {
+      margin: 20px 0; }
+      .banner .text-bloc .cta-bloc .button:active, .banner .text-bloc .cta-bloc .button:hover {
+        background: green;
+        border-color: green; }
 
 /* HELPERS */
 /* BOX-SHADOW */
 /* TRANSITION */
 /* BORDER-RADIUS */
 /* GRADIENT */
+/* ---------------------------------------------------------------------   INHERITANCE	----------------------------------------------------------------------------- */
+.banner .text-bloc .cta-bloc .button {
+  padding: 18px 28px;
+  background: blue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid #fff; }
+
 /* SASS COLORS */
 
 /*# sourceMappingURL=style.css.map */
