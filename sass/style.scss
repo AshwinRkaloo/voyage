@@ -1,0 +1,19 @@
+/* BASE */
+@import 'base';
+
+
+/* COMPONENTS */
+@import 'components/topbar';
+@import 'components/navbar';
+@import 'components/banner';
+@import 'components/holidays-pack';
+@import 'components/special-offers';
+@import 'components/holidays-type';
+@import 'components/happy-clients';
+@import 'components/footer';
+
+
+/* HELPERS */
+@import 'helpers/mixins';
+@import 'helpers/settings';
+
