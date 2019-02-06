@@ -1,5 +1,33 @@
 @import 'reset';
 
 html, body {
-                font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+    font-size: 64px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h1, h2 h3, h4, h5 {
+    text-transform: uppercase;
+}
+
+
+/* BUTTONS */
+.mybutton {
+    padding: 25px 100px;
+    border-radius:5px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+
+}
+/* HELPER CLASSES */
+.green {
+    color: #1dd2af;
+}
+

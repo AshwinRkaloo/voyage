@@ -1,4 +1,36 @@
-// .topbar {
-//                 background: map-get($colors, primary);
-//                 height: 30px;
-// }
+.topbar {
+    background: #2c3e50;
+    padding: 10px 0;
+
+    ul.top-login {
+        display: flex;
+        align-items: center;
+        //padding: 30px 0;       
+        
+        li{
+            padding: 0 10px;
+            font-weight: 300;
+            position: relative;
+
+            a {
+                text-decoration: none;
+                color: white;               
+
+                span {
+                    padding: 0 5px;
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                height: 20px;
+                width: 2px;
+                background: #000;
+            }
+        }
+    }
+}
