@@ -1,0 +1,71 @@
+footer {
+    background: map-get($colors, primary);
+    padding: 80px 0;
+
+    h6 {
+        color: map-get($colors, secondary);
+        text-transform: initial;
+    }
+
+    p {
+        color: map-get($colors, white);
+        line-height: 20px;
+    }
+
+    .mybutton {
+        @include button(10px 15px, map-get($colors, secondary), none, 14px, 3px);
+        margin: 3px;
+    }
+
+    &-tags {
+        margin-top: 5em;
+    }
+
+    button.mybutton {
+        @include button(10px 15px, transparent, 2px solid #fff, 14px, 3px);
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        width: 175px;       
+        border: none;
+        margin-top: 30px;
+    }
+
+    .bloc-news {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 0;
+        &-img {
+            outline: 1px solid map-get($colors, white);
+            outline-offset: 3px;
+        }
+
+        &-info {
+            padding-left: 10px;
+            &-title {
+                font-size: 13px;
+                color: map-get($colors, white);
+                display: block;
+                max-width: 175px;
+                line-height: 1.6;
+            }
+
+            &-date {
+                font-size: 12px;
+                color: map-get($colors, secondary);
+                display: block;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    ul.social-icons {
+        display: flex;
+        padding: 0 5px;
+        
+        // a {
+        //     color: 
+        // }
+    }
+}

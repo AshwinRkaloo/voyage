@@ -1,6 +1,10 @@
+/* HELPERS */
+@import 'helpers/mixins';
+@import 'helpers/settings';
+
+
 /* BASE */
 @import 'base';
-
 
 /* COMPONENTS */
 @import 'components/topbar';
@@ -13,7 +17,5 @@
 @import 'components/footer';
 
 
-/* HELPERS */
-@import 'helpers/mixins';
-@import 'helpers/settings';
+
 

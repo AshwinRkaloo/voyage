@@ -15,10 +15,10 @@
         
             a {
                 text-decoration: none;
-                color: #4d4d4d;
+                color: map-get($colors, text);
 
                 &:active, &:hover {
-                    color: #1dd2af;
+                    color: map-get($colors, secondary);
                 }
 
 

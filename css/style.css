@@ -1,3 +1,9 @@
+/* HELPERS */
+/* BOX-SHADOW */
+/* TRANSITION */
+/* BORDER-RADIUS */
+/* GRADIENT */
+/* SASS COLORS */
 /* BASE */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,18 +58,15 @@ h1 {
 
 h4 {
   font-size: 34px;
+  font-weight: 400; }
+
+h6 {
+  font-size: 24px;
   font-weight: 500; }
 
-h1, h2 h3, h4, h5 {
-  text-transform: uppercase; }
-
-/* BUTTONS */
-.mybutton {
-  padding: 25px 100px;
-  border-radius: 5px;
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff; }
+h1, h2 h3, h4, h5, h6 {
+  text-transform: uppercase;
+  margin-bottom: 10px; }
 
 /* HELPER CLASSES */
 .green {
@@ -113,9 +116,9 @@ h1, h2 h3, h4, h5 {
     margin-top: 10px; }
 
 .banner {
-  background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url("../images/banner.png") no-repeat;
+  background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner.png") no-repeat;
   background-size: cover;
-  height: 1200px;
+  height: 800px;
   color: #fff;
   position: relative; }
   .banner .text-bloc {
@@ -123,30 +126,169 @@ h1, h2 h3, h4, h5 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    .banner .text-bloc .banner_subtitle {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 300; }
     .banner .text-bloc .cta-bloc {
-      margin: 20px 0; }
+      margin: 30px 0; }
       .banner .text-bloc .cta-bloc .button:active, .banner .text-bloc .cta-bloc .button:hover {
         background: green;
         border-color: green; }
 
-/* HELPERS */
-/* BOX-SHADOW */
-/* TRANSITION */
-/* BORDER-RADIUS */
-/* GRADIENT */
-/* ---------------------------------------------------------------------   INHERITANCE	----------------------------------------------------------------------------- */
-.banner .text-bloc .cta-bloc .button {
-  padding: 18px 28px;
-  background: blue;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  color: #fff;
-  font-size: 22px;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  border: 2px solid #fff; }
+.holidays_pack {
+  background: #2c3e50;
+  padding: 25px 0;
+  display: flex;
+  align-items: center; }
+  .holidays_pack h5 {
+    color: #b2b2b2;
+    font-size: 18px; }
+    .holidays_pack h5 span {
+      color: #fff;
+      font-size: 24px;
+      display: block; }
+  .holidays_pack label {
+    color: #b2b2b2;
+    margin-right: 15px; }
+  .holidays_pack input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    background-image: url("../images/world.png");
+    background-repeat: no-repeat;
+    background-position: 97% 50%; }
 
-/* SASS COLORS */
+.special_offers {
+  padding: 80px 0 120px; }
+  .special_offers .bloc-text h6 {
+    color: #2c3e50; }
+  .special_offers .bloc-text p {
+    color: #4d4d4d; }
+  .special_offers .card-offers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    text-align: left; }
+    .special_offers .card-offers-bloc {
+      border: 5px solid #eeeeee;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      width: 15%; }
+      .special_offers .card-offers-bloc img {
+        width: 100%; }
+      .special_offers .card-offers-bloc-detail {
+        background: #eeeeee;
+        padding: 10px; }
+        .special_offers .card-offers-bloc-detail h5 {
+          font-size: 20px;
+          text-transform: initial;
+          color: #4d4d4d; }
+        .special_offers .card-offers-bloc-detail p {
+          font-size: 16px;
+          color: #b2b2b2; }
+
+.holidays_type {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url("../images/holiday_type_bg.png") no-repeat;
+  filter: grayscale(50%);
+  background-size: cover;
+  background-position: 0 31%;
+  height: 350px;
+  padding: 120px 0; }
+  .holidays_type-row {
+    margin-top: 50px; }
+  .holidays_type .bloc-text {
+    margin-bottom: 50px; }
+    .holidays_type .bloc-text h6 {
+      color: #fff;
+      font-weight: 300; }
+    .holidays_type .bloc-text p {
+      color: #b2b2b2; }
+  .holidays_type-category {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 5px solid #fff;
+    background: transparent;
+    height: 160px;
+    width: 160px;
+    position: relative; }
+    .holidays_type-category img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .holidays_type-name {
+    color: #b2b2b2;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px; }
+
+.happy_client {
+  padding: 80px 0 120px; }
+  .happy_client .bloc-text h6 {
+    color: #2c3e50; }
+  .happy_client .bloc-text p {
+    color: #4d4d4d; }
+
+footer {
+  background: #2c3e50;
+  padding: 80px 0; }
+  footer h6 {
+    color: #1dd2af;
+    text-transform: initial; }
+  footer p {
+    color: #fff;
+    line-height: 20px; }
+  footer .mybutton {
+    padding: 10px 15px;
+    background: #1dd2af;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    margin: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 3px; }
+  footer-tags {
+    margin-top: 5em; }
+  footer button.mybutton {
+    padding: 10px 15px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    margin: 5px;
+    font-size: 14px;
+    text-transform: uppercase; }
+  footer input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    margin-top: 30px; }
+  footer .bloc-news {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0; }
+    footer .bloc-news-img {
+      outline: 1px solid #fff;
+      outline-offset: 3px; }
+    footer .bloc-news-info {
+      padding-left: 10px; }
+      footer .bloc-news-info-title {
+        font-size: 13px;
+        color: #fff;
+        display: block;
+        max-width: 175px;
+        line-height: 1.6; }
+      footer .bloc-news-info-date {
+        font-size: 12px;
+        color: #1dd2af;
+        display: block;
+        line-height: 1.6; }
+  footer ul.socials-icons li {
+    display: inline-block;
+    padding: 0 5px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,46 @@
+.holidays_type {
+    background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)), url('../images/holiday_type_bg.png') no-repeat;
+    filter: grayscale(50%);
+    background-size: cover;
+    background-position: 0 31%;
+    height: 350px;
+    padding: 120px 0;
+
+    &-row {
+        margin-top: 50px;
+    }
+
+    .bloc-text {
+        margin-bottom: 50px;
+        h6 {
+            color: map-get($colors, white);
+            font-weight: 300;
+        }
+        p {
+            color: map-get($colors, pale_text);
+        }
+    }
+
+    &-category {
+        @include border-radius(50%);
+        border: 5px solid #fff;
+        background: transparent;
+        height: 160px;
+        width: 160px;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-name {
+        color: map-get($colors, pale_text);
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+}

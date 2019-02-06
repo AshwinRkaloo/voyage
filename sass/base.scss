@@ -12,23 +12,19 @@ h1 {
 
 h4 {
     font-size: 34px;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 24px;
     font-weight: 500;
 }
 
-h1, h2 h3, h4, h5 {
+h1, h2 h3, h4, h5, h6 {
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-
-/* BUTTONS */
-.mybutton {
-    padding: 25px 100px;
-    border-radius:5px;
-    background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-
-}
 /* HELPER CLASSES */
 .green {
     color: #1dd2af;

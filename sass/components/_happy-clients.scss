@@ -1,0 +1,12 @@
+.happy_client {
+    padding: 80px 0 120px;
+    .bloc-text {
+        h6 {
+            color: map-get($colors, primary);
+        }
+
+        p {
+            color: map-get($colors, text);
+        }
+    }
+}

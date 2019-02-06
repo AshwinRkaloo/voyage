@@ -1,0 +1,45 @@
+.special_offers {
+    padding: 80px 0 120px;
+    .bloc-text {
+        h6 {
+            color: map-get($colors, primary);            
+        }
+
+        p {
+            color: map-get($colors, text);
+        }
+    }
+
+    .card-offers {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        text-align: left;
+        
+        &-bloc {
+            border: 5px solid #eeeeee;
+            @include border-radius(5px);
+            width: 15%;
+
+            img {
+                width: 100%;
+            }
+
+            &-detail {
+                background: #eeeeee;
+                padding: 10px;
+
+                h5 {
+                    font-size: 20px;
+                    text-transform: initial;
+                    color: map-get($colors, text);
+                }
+
+                p {
+                    font-size: 16px;
+                    color: map-get($colors, pale_text);
+                }
+            }
+        }
+    }
+}

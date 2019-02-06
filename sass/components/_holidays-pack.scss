@@ -1,0 +1,32 @@
+.holidays_pack {
+    background: #2c3e50;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+
+    h5 {
+        color: #b2b2b2;
+        font-size: 18px;
+        span {
+            color: #fff;
+            font-size: 24px;
+            display: block;
+        }
+    }
+
+    label {
+        color: #b2b2b2;
+        margin-right: 15px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        width: 300px;       
+        border: none;
+        background-image: url('../images/world.png');
+        background-repeat: no-repeat;
+        background-position: 97% 50%;        
+    }
+    
+    
+}
