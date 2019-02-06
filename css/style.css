@@ -48,14 +48,70 @@ html, body {
 
 h1 {
   font-size: 65px;
-  font-weight: 700;
-  text-transform: uppercase; }
+  font-weight: 700; }
 
 h4 {
   font-size: 34px;
   font-weight: 500; }
 
+h1, h2 h3, h4, h5 {
+  text-transform: uppercase; }
+
+/* BUTTONS */
+.mybutton {
+  padding: 25px 100px;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff; }
+
+/* HELPER CLASSES */
+.green {
+  color: #1dd2af; }
+
 /* COMPONENTS */
+.topbar {
+  background: #2c3e50;
+  padding: 10px 0; }
+  .topbar ul.top-login {
+    display: flex;
+    align-items: center; }
+    .topbar ul.top-login li {
+      padding: 0 10px;
+      font-weight: 300;
+      position: relative; }
+      .topbar ul.top-login li a {
+        text-decoration: none;
+        color: white; }
+        .topbar ul.top-login li a span {
+          padding: 0 5px; }
+      .topbar ul.top-login li:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        height: 20px;
+        width: 2px;
+        background: #000; }
+
+.navbar {
+  padding: 20px 0; }
+  .navbar nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 40px; }
+    .navbar nav ul li {
+      padding: 0 15px; }
+      .navbar nav ul li a {
+        text-decoration: none;
+        color: #4d4d4d; }
+        .navbar nav ul li a:active, .navbar nav ul li a:hover {
+          color: #1dd2af; }
+  .navbar .nav-search {
+    margin-top: 10px; }
+
 .banner {
   background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url("../images/banner.png") no-repeat;
   background-size: cover;
