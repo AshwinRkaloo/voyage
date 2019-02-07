@@ -4,10 +4,9 @@
 
     ul.top-login {
         display: flex;
-        align-items: center;
-        //padding: 30px 0;       
+        align-items: center;      
         
-        li{
+        li {
             padding: 0 10px;
             font-weight: 300;
             position: relative;
@@ -28,8 +27,8 @@
                 right: 0;
                 display: block;
                 height: 20px;
-                width: 2px;
-                background: #000;
+                width: 1px;
+                background: map-get($colors, black);
             }
         }
     }

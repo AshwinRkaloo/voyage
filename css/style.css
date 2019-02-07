@@ -68,6 +68,9 @@ h1, h2 h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-bottom: 10px; }
 
+form {
+  width: 100%; }
+
 /* HELPER CLASSES */
 .green {
   color: #1dd2af; }
@@ -95,7 +98,7 @@ h1, h2 h3, h4, h5, h6 {
         right: 0;
         display: block;
         height: 20px;
-        width: 2px;
+        width: 1px;
         background: #000; }
 
 .navbar {
@@ -165,12 +168,26 @@ h1, h2 h3, h4, h5, h6 {
     color: #b2b2b2;
     margin-right: 15px; }
   .holidays_pack input[type="text"] {
-    padding: 10px;
+    padding: 15px;
     width: 300px;
     border: none;
     background-image: url("../images/world.png");
     background-repeat: no-repeat;
     background-position: 97% 50%; }
+  .holidays_pack button.mybutton {
+    padding: 10px 25px;
+    background: #1dd2af;
+    border: 2px solid #1dd2af;
+    border-radius: 0;
+    color: #fff;
+    margin: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0; }
+    .holidays_pack button.mybutton:active, .holidays_pack button.mybutton:hover {
+      background: #1dd2af; }
 
 .special_offers {
   padding: 80px 0 120px; }
@@ -266,10 +283,12 @@ h1, h2 h3, h4, h5, h6 {
         transform: rotate(53deg);
         box-shadow: 1px 1px #eeeeee;
         background: inherit; }
-      .happy_client .slider-testimonials .slides.active {
+      .happy_client .slider-testimonials .slides:hover {
         border-top: 4px solid #1dd2af;
         opacity: 1; }
-        .happy_client .slider-testimonials .slides.active:after {
+        .happy_client .slider-testimonials .slides:hover p {
+          transform: translateY(-2px); }
+        .happy_client .slider-testimonials .slides:hover:after {
           width: 48px;
           height: 36px;
           bottom: -17px;

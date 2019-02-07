@@ -35,9 +35,13 @@
                 background: inherit;
             }
 
-            &.active {
+            &:hover {
                 border-top: 4px solid map-get($colors, secondary);
                 opacity: 1;
+
+                p {
+                    transform: translateY(-2px);
+                }
 
                 &:after {
                     width: 48px;
