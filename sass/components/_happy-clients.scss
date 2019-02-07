@@ -1,5 +1,6 @@
 .happy_client {
-    padding: 80px 0 120px;
+    padding: 80px 0 30px;
+
     .bloc-text {
         h6 {
             color: map-get($colors, primary);
@@ -8,5 +9,73 @@
         p {
             color: map-get($colors, text);
         }
+    }
+
+    .slider-testimonials {
+        display: flex;
+        margin-top: 50px;
+
+        .slides {
+            border: 1px solid map-get($colors, pale_bg);
+            width: 22%;
+            padding: 20px;
+            position: relative;
+            opacity: 0.7;
+            background: map-get($colors, white);
+            
+            &:after {
+                content: '';
+                position: absolute;
+                width: 36px;
+                height: 48px;
+                right: 12%;
+                bottom: -24px;
+                transform: rotate(53deg);                
+                box-shadow: 1px 1px map-get($colors, pale_bg);
+                background: inherit;
+            }
+
+            &.active {
+                border-top: 4px solid map-get($colors, secondary);
+                opacity: 1;
+
+                &:after {
+                    width: 48px;
+                    height: 36px;
+                    bottom: -17px;
+                    transform: rotate(36deg);
+                }
+            }
+
+            .testimony {
+                font-size: 15px;
+                line-height: 1.2;
+                color: map-get($colors, text);
+            }
+
+            .author {
+                font-size: 18px;
+                color: map-get($colors, secondary);
+                margin: 10px 0;
+            }
+
+            .country {
+                font-size: 14px;
+                color: map-get($colors, pale_text);
+            }
+
+
+        }
+    }
+
+    /* BX SILDER OVERWRITE CLASSES */
+
+    .bx-wrapper {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .bx-viewport {
+        height: 260px !important;
     }
 }

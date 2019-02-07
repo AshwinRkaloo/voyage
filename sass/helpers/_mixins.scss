@@ -177,7 +177,7 @@
     align-self: $align;
 }
 
-@mixin button($padding:15px, $background: transparent, $border: 2px solid #fff, $fontSize: 24px, $borderRadius: 4px) {
+@mixin button($padding:15px, $background: transparent, $border: 2px solid #fff, $fontSize: 20px, $borderRadius: 4px) {
     padding: $padding;
     background: $background;
     border: $border;
@@ -187,4 +187,10 @@
     margin: 5px;
     font-size: $fontSize;
     text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:active, &:hover {
+        background: map-get($colors, secondary);
+    }
 }

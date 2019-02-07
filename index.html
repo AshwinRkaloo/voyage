@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
-                <link rel="stylesheet" type="text/css" href="css/style.css" />
-                <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css" />
-                <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-                <script type="text/javascript" src="js/myjs.js"></script>
-                <title>Voyage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/myjs.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    
+    <title>Voyage</title>
 </head>
 <body>
     <!-- TOPBAR -->
@@ -69,8 +72,8 @@
                         <h1>To travel is to live</h1>
                         <p class="banner_subtitle">You Don't Need Magic to Disappear. All you need is a destination.</p>
                         <div class="cta-bloc">
-                            <button type="button" class="mybutton">Show on the map</button>
-                            <button type="button" class="mybutton">More info</button>
+                            <a href="" class="mybutton active">Show on the map</a>
+                            <a href="" class="mybutton">More info</a>
                         </div>
                     </div>
                 </div>
@@ -230,7 +233,50 @@
                     </div>              
                 </div>
             </div>
-        </div>
+        </div>            
+        <div class="slider-testimonials">
+            <!-- First testimonial -->
+            <div class="slides">
+                <p class="testimony">Lorem Ipsum is simply dummy text of the printing and typeset industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever hen an with new version look.
+                </p>
+                <p class="author">Mike Brant</p>
+                <p class="country">England</p>                
+            </div>
+
+            <!-- Second testimonial -->
+            <div class="slides">
+                <p class="testimony">Comidas que garantizan tanto el placer como la ingesta nutricional. Bajas en calorías, son adecuadas para personas que desean perder</p>
+                <p class="author">Arnold Wigner</p>
+                <p class="country">Mauritius</p>                
+            </div>
+
+            <!-- Third testimonial -->
+            <div class="slides">
+                <p class="testimony">Maaltijd waarmee je de nodige voedingsstoffen binnenkrijgt en tegelijk ook lekker kan smullen. Caloriearm, dus ideaal voor iedereen die wil afslanken en/of zijn gewicht wil beheersen.
+                </p>
+                <p class="author">Monica Belluci</p>
+                <p class="country">Spain</p>                
+            </div>
+
+            <!-- Fourth testimonial -->
+            <div class="slides">
+                <p class="testimony">Lorem Ipsum is simply dummy text of the printing and typeset industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever hen an with new version look.
+                </p>
+                <p class="author">Sharon Stone</p>
+                <p class="country">France</p>                
+            </div>
+
+            <!-- Fifth testimonial -->
+            <div class="slides">
+                <p class="testimony">
+                        Refeições que garantem prazer e ingestão nutricional. Baixas em calorias e adequadas para pessoas que desejam perder e/ou controlar o peso.
+                </p>
+                <p class="author">Manuella Wagner</p>
+                <p class="country">Germany</p>                
+            </div>
+        </div>              
     </section>
 
     <!-- FOOTER -->
@@ -286,12 +332,12 @@
                     <h6>Address</h6>
                     <p>DieSachbearbeiter Schönhauser Allee </p>
                     <p>167c,10435 Berlin Germany </p>
-                    <p><span class="green">E-mail: </span><a href="mailto">moin@blindtextgenerator.de</a></p>
+                    <p><span class="green">E-mail: </span><a href="mailto:moin@blindtextgenerator.de">moin@blindtextgenerator.de</a></p>
                     <ul class="social-icons">
-                        <li><a href="" target="_blank"><img src="images/fb.png" alt="Facebook"></a></li>
-                        <li><a href="" target="_blank"><img src="images/twitter.png" alt="Twitter"></a></li>
-                        <li><a href="" target="_blank"><img src="images/tumblr.png" alt="tumblr"></a></li>
-                        <li><a href="" target="_blank"><img src="images/pinterest.png" alt="pinterest"></a></li>
+                        <li class="facebook"><a href="" target="_blank"></a></li>
+                        <li class="twitter"><a href="" target="_blank"></a></li>
+                        <li class="tumblr"><a href="" target="_blank"></a></li>
+                        <li class="pinterest"><a href="" target="_blank"></a></li>
                     </ul>
                 </div>
             </div>

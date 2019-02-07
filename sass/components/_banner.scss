@@ -19,12 +19,12 @@
 
         .cta-bloc {
             margin: 30px 0;
-            .button {
-                //@include button($padding, $background);
-                &:active, &:hover {
-                    background: green;
-                    border-color: green;
-                }
+            .mybutton {
+                @include button(10px 15px, transparent);
+                &.active {
+                    background: map-get($colors, secondary);
+                    border: 2px solid map-get($colors, secondary);
+                }                
             }
         }                    
                     

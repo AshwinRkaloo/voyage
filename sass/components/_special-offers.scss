@@ -20,6 +20,7 @@
             border: 5px solid #eeeeee;
             @include border-radius(5px);
             width: 15%;
+            background: map-get($colors, pale_bg);
 
             img {
                 width: 100%;

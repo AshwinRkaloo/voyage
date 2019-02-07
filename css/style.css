@@ -132,9 +132,22 @@ h1, h2 h3, h4, h5, h6 {
       font-weight: 300; }
     .banner .text-bloc .cta-bloc {
       margin: 30px 0; }
-      .banner .text-bloc .cta-bloc .button:active, .banner .text-bloc .cta-bloc .button:hover {
-        background: green;
-        border-color: green; }
+      .banner .text-bloc .cta-bloc .mybutton {
+        padding: 10px 15px;
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        margin: 5px;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none; }
+        .banner .text-bloc .cta-bloc .mybutton:active, .banner .text-bloc .cta-bloc .mybutton:hover {
+          background: #1dd2af; }
+        .banner .text-bloc .cta-bloc .mybutton.active {
+          background: #1dd2af;
+          border: 2px solid #1dd2af; }
 
 .holidays_pack {
   background: #2c3e50;
@@ -175,7 +188,8 @@ h1, h2 h3, h4, h5, h6 {
       border-radius: 5px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
-      width: 15%; }
+      width: 15%;
+      background: #eeeeee; }
       .special_offers .card-offers-bloc img {
         width: 100%; }
       .special_offers .card-offers-bloc-detail {
@@ -226,11 +240,56 @@ h1, h2 h3, h4, h5, h6 {
     margin-top: 20px; }
 
 .happy_client {
-  padding: 80px 0 120px; }
+  padding: 80px 0 30px;
+  /* BX SILDER OVERWRITE CLASSES */ }
   .happy_client .bloc-text h6 {
     color: #2c3e50; }
   .happy_client .bloc-text p {
     color: #4d4d4d; }
+  .happy_client .slider-testimonials {
+    display: flex;
+    margin-top: 50px; }
+    .happy_client .slider-testimonials .slides {
+      border: 1px solid #eeeeee;
+      width: 22%;
+      padding: 20px;
+      position: relative;
+      opacity: 0.7;
+      background: #fff; }
+      .happy_client .slider-testimonials .slides:after {
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 48px;
+        right: 12%;
+        bottom: -24px;
+        transform: rotate(53deg);
+        box-shadow: 1px 1px #eeeeee;
+        background: inherit; }
+      .happy_client .slider-testimonials .slides.active {
+        border-top: 4px solid #1dd2af;
+        opacity: 1; }
+        .happy_client .slider-testimonials .slides.active:after {
+          width: 48px;
+          height: 36px;
+          bottom: -17px;
+          transform: rotate(36deg); }
+      .happy_client .slider-testimonials .slides .testimony {
+        font-size: 15px;
+        line-height: 1.2;
+        color: #4d4d4d; }
+      .happy_client .slider-testimonials .slides .author {
+        font-size: 18px;
+        color: #1dd2af;
+        margin: 10px 0; }
+      .happy_client .slider-testimonials .slides .country {
+        font-size: 14px;
+        color: #b2b2b2; }
+  .happy_client .bx-wrapper {
+    border: 0;
+    box-shadow: none; }
+  .happy_client .bx-viewport {
+    height: 260px !important; }
 
 footer {
   background: #2c3e50;
@@ -241,7 +300,11 @@ footer {
     text-transform: initial; }
   footer p {
     color: #fff;
-    line-height: 20px; }
+    line-height: 2;
+    font-size: 14px; }
+  footer a {
+    text-decoration: none;
+    color: #fff; }
   footer .mybutton {
     padding: 10px 15px;
     background: #1dd2af;
@@ -251,8 +314,11 @@ footer {
     margin: 5px;
     font-size: 14px;
     text-transform: uppercase;
-    margin: 3px; }
-  footer button.mybutton {
+    cursor: pointer;
+    text-decoration: none; }
+    footer .mybutton:active, footer .mybutton:hover {
+      background: #1dd2af; }
+  footer .footer-tags .mybutton {
     padding: 10px 15px;
     background: transparent;
     border: 2px solid #fff;
@@ -260,7 +326,12 @@ footer {
     color: #fff;
     margin: 5px;
     font-size: 14px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: initial; }
+    footer .footer-tags .mybutton:active, footer .footer-tags .mybutton:hover {
+      background: #1dd2af; }
   footer input[type="text"] {
     padding: 10px;
     width: 175px;
@@ -286,9 +357,26 @@ footer {
         color: #1dd2af;
         display: block;
         line-height: 1.6; }
-  footer ul.social-icons {
-    display: flex;
-    padding: 0 5px; }
+  footer ul.social-icons li {
+    display: inline-block;
+    padding: 0 5px;
+    margin-top: 20px; }
+    footer ul.social-icons li.facebook, footer ul.social-icons li.twitter, footer ul.social-icons li.tumblr, footer ul.social-icons li.pinterest {
+      background: url("../images/social-icons.png");
+      height: 23px;
+      cursor: pointer; }
+    footer ul.social-icons li.facebook {
+      background-position: 0 0;
+      width: 7px; }
+    footer ul.social-icons li.twitter {
+      background-position: 125px 0;
+      width: 22px; }
+    footer ul.social-icons li.tumblr {
+      background-position: 67px 0;
+      width: 13px; }
+    footer ul.social-icons li.pinterest {
+      background-position: 23px 0;
+      width: 13px; }
   footer .separator {
     width: 100%;
     height: 1px;
@@ -296,7 +384,8 @@ footer {
     margin: 50px 0;
     opacity: 0.3; }
   footer .copyright {
-    color: #9dafc0; }
+    color: #9dafc0;
+    margin: 20px 0; }
   footer .toTopbutton {
     width: 80px;
     height: 40px;
@@ -307,7 +396,8 @@ footer {
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    cursor: pointer; }
     footer .toTopbutton:after {
       content: '';
       background: url("../images/totoparrow.png");

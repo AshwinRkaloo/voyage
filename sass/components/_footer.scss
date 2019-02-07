@@ -10,16 +10,22 @@ footer {
 
     p {
         color: map-get($colors, white);
-        line-height: 20px;
+        line-height: 2;
+        font-size: 14px;
+    }
+
+    a {
+        text-decoration: none;
+        color: map-get($colors, white);
     }
 
     .mybutton {
         @include button(10px 15px, map-get($colors, secondary), none, 14px, 3px);
-        margin: 3px;
     }
 
-    button.mybutton {
-        @include button(10px 15px, transparent, 2px solid #fff, 14px, 3px);
+    .footer-tags .mybutton {
+        @include button(10px 15px, transparent, 2px solid map-get($colors, white), 14px, 3px);
+        text-transform: initial;
     }
 
     input[type="text"] {
@@ -57,9 +63,35 @@ footer {
         }
     }
 
-    ul.social-icons {
-        display: flex;
+    ul.social-icons li {
+        display: inline-block;
         padding: 0 5px;
+        margin-top: 20px;
+
+        &.facebook, &.twitter, &.tumblr, &.pinterest {
+            background: url('../images/social-icons.png');
+            height: 23px;
+            cursor: pointer;
+        }
+        &.facebook {
+            background-position: 0 0;
+            width: 7px;
+        }
+
+        &.twitter {
+            background-position: 125px 0; 
+            width: 22px;
+        }
+
+        &.tumblr {
+            background-position: 67px 0;
+            width: 13px;
+        }
+
+        &.pinterest {
+            background-position: 23px 0;
+            width: 13px;
+        }
     }
 
     .separator {
@@ -72,6 +104,7 @@ footer {
 
     .copyright {
         color: map-get($colors, blue_text);
+        margin: 20px 0;
     }
 
     .toTopbutton {
@@ -85,6 +118,7 @@ footer {
         left: 50%;
         transform: translate(-50%);
         box-sizing: border-box;
+        cursor: pointer;
 
         &:after {
             content: '';
