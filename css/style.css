@@ -204,7 +204,7 @@ h1, h2 h3, h4, h5, h6 {
       color: #fff;
       font-weight: 300; }
     .holidays_type .bloc-text p {
-      color: #b2b2b2; }
+      color: #9dafc0; }
   .holidays_type-category {
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -220,7 +220,7 @@ h1, h2 h3, h4, h5, h6 {
       left: 50%;
       transform: translate(-50%, -50%); }
   .holidays_type-name {
-    color: #b2b2b2;
+    color: #9dafc0;
     font-size: 20px;
     text-align: center;
     margin-top: 20px; }
@@ -234,7 +234,8 @@ h1, h2 h3, h4, h5, h6 {
 
 footer {
   background: #2c3e50;
-  padding: 80px 0; }
+  padding: 80px 0;
+  position: relative; }
   footer h6 {
     color: #1dd2af;
     text-transform: initial; }
@@ -251,8 +252,6 @@ footer {
     font-size: 14px;
     text-transform: uppercase;
     margin: 3px; }
-  footer-tags {
-    margin-top: 5em; }
   footer button.mybutton {
     padding: 10px 15px;
     background: transparent;
@@ -264,7 +263,7 @@ footer {
     text-transform: uppercase; }
   footer input[type="text"] {
     padding: 10px;
-    width: 200px;
+    width: 175px;
     border: none;
     margin-top: 30px; }
   footer .bloc-news {
@@ -287,8 +286,50 @@ footer {
         color: #1dd2af;
         display: block;
         line-height: 1.6; }
-  footer ul.socials-icons li {
-    display: inline-block;
+  footer ul.social-icons {
+    display: flex;
     padding: 0 5px; }
+  footer .separator {
+    width: 100%;
+    height: 1px;
+    background: #b2b2b2;
+    margin: 50px 0;
+    opacity: 0.3; }
+  footer .copyright {
+    color: #9dafc0; }
+  footer .toTopbutton {
+    width: 80px;
+    height: 40px;
+    border-bottom: solid 40px #1dd2af;
+    border-left: solid 40px transparent;
+    border-right: solid 40px transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    box-sizing: border-box; }
+    footer .toTopbutton:after {
+      content: '';
+      background: url("../images/totoparrow.png");
+      position: absolute;
+      top: 12px;
+      transform: translate(-50%, 50%);
+      height: 13px;
+      width: 14px; }
+  footer ul.footer-menu li {
+    display: inline-block;
+    padding: 0 7px;
+    position: relative; }
+    footer ul.footer-menu li a {
+      text-decoration: none;
+      color: #fff; }
+      footer ul.footer-menu li a:after {
+        content: '::';
+        position: absolute;
+        padding-left: 5px; }
+      footer ul.footer-menu li a:after:last-of-type {
+        content: '****';
+        position: absolute;
+        padding-left: 5px; }
 
 /*# sourceMappingURL=style.css.map */

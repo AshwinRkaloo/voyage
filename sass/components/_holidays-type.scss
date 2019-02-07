@@ -17,7 +17,7 @@
             font-weight: 300;
         }
         p {
-            color: map-get($colors, pale_text);
+            color: map-get($colors, blue_text);
         }
     }
 
@@ -38,7 +38,7 @@
     }
 
     &-name {
-        color: map-get($colors, pale_text);
+        color: map-get($colors, blue_text);
         font-size: 20px;
         text-align: center;
         margin-top: 20px;
