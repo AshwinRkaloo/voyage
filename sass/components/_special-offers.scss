@@ -1,5 +1,7 @@
 .special_offers {
+
     padding: 80px 0 120px;
+
     .bloc-text {
         h6 {
             color: map-get($colors, primary);            
@@ -12,7 +14,6 @@
 
     .card-offers {
         display: flex;
-        justify-content: space-between;
         margin-top: 40px;
         text-align: left;
 
@@ -24,7 +25,7 @@
         &-bloc {
             border: 5px solid #eeeeee;
             @include border-radius(5px);
-            width: 14%;
+            width: 270px;
             background: map-get($colors, pale_bg);
             transition: transform 0.3s ease-out, background 0.2s ease-out;
 

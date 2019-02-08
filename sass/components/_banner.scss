@@ -5,6 +5,34 @@
     position: relative;
 
     .banner-slider-bloc {
+
+        .slide1, .slide2 {
+            
+            .text-bloc {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        
+                .banner_subtitle {
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: 300;
+                }
+        
+                .cta-bloc {
+                    margin: 30px 0;
+                    .mybutton {
+                        @include button(10px 15px, transparent);
+                        &.active {
+                            background: map-get($colors, secondary);
+                            border: 2px solid map-get($colors, secondary);
+                        }                
+                    }
+                }                    
+                            
+            }
+        }
         
         .slide1 {
             background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner.png') no-repeat;
@@ -14,30 +42,5 @@
             background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner2.jpg') no-repeat;
         }
         
-    }
-
-    .text-bloc {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        .banner_subtitle {
-            color: #fff;
-            font-size: 32px;
-            font-weight: 300;
-        }
-
-        .cta-bloc {
-            margin: 30px 0;
-            .mybutton {
-                @include button(10px 15px, transparent);
-                &.active {
-                    background: map-get($colors, secondary);
-                    border: 2px solid map-get($colors, secondary);
-                }                
-            }
-        }                    
-                    
     }
 }
