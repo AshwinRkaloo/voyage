@@ -7,7 +7,10 @@
     .banner-slider-bloc {
 
         .slide1, .slide2 {
-            
+
+            height: 800px;
+            background-size: cover;
+
             .text-bloc {
                 position: absolute;
                 top: 50%;
@@ -42,5 +45,12 @@
             background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner2.jpg') no-repeat;
         }
         
+    }
+
+    /* BX CSS OVERWRITE */
+    .bx-wrapper {
+        border: 0;
+        height: 800px;
+        box-shadow: none;
     }
 }
