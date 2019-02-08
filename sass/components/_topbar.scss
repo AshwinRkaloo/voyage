@@ -4,7 +4,8 @@
 
     ul.top-login {
         display: flex;
-        align-items: center;      
+        align-items: center;
+        margin-top: 5px;      
         
         li {
             padding: 0 10px;
@@ -23,13 +24,38 @@
             &:after {
                 content: '';
                 position: absolute;
-                top: 0;
+                top: -20px;
                 right: 0;
                 display: block;
-                height: 20px;
+                height: 49px;
                 width: 1px;
-                background: map-get($colors, black);
+                background: map-get($colors, list-sep);
             }
+        }
+    }
+
+    ul.social-icons li {        
+        transform: scale(0.8);
+        padding: 0 10px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -12px;
+            right: 0;
+            height: 55px;
+            width: 1px;
+            background: map-get($colors, list-sep);
+        }
+
+        &.facebook:before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: -25px;
+            height: 55px;
+            width: 1px;
+            background: map-get($colors, list-sep);
         }
     }
 }

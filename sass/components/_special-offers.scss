@@ -15,19 +15,35 @@
         justify-content: space-between;
         margin-top: 40px;
         text-align: left;
+
+        &:hover .card-offers-bloc:not(:hover) {
+            transform: scale(0.8);
+            opacity: 0.7;
+        }
         
         &-bloc {
             border: 5px solid #eeeeee;
             @include border-radius(5px);
-            width: 15%;
+            width: 14%;
             background: map-get($colors, pale_bg);
+            transition: transform 0.3s ease-out, background 0.2s ease-out;
+
+            &:hover {
+                transform: scale(1.1);
+                border: 5px solid map-get($colors, secondary);
+                background: map-get($colors, primary);
+
+                & .card-offers-bloc-detail h5 {
+                    color: map-get($colors, white);
+                }
+            }
 
             img {
                 width: 100%;
             }
 
             &-detail {
-                background: #eeeeee;
+                background: inherit;
                 padding: 10px;
 
                 h5 {

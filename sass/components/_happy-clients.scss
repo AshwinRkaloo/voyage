@@ -20,7 +20,7 @@
             width: 22%;
             padding: 20px;
             position: relative;
-            opacity: 0.7;
+            opacity: 0.5;
             background: map-get($colors, white);
             
             &:after {
@@ -37,6 +37,9 @@
 
             &:hover {
                 border-top: 4px solid map-get($colors, secondary);
+                border-left: 1px solid map-get($colors, blue_text);
+                border-bottom: 1px solid map-get($colors, blue_text);
+                border-right: 1px solid map-get($colors, blue_text);
                 opacity: 1;
 
                 p {
@@ -48,6 +51,7 @@
                     height: 36px;
                     bottom: -17px;
                     transform: rotate(36deg);
+                    box-shadow: 1px 1px map-get($colors, blue_text);
                 }
             }
 

@@ -27,10 +27,60 @@ h1, h2 h3, h4, h5, h6 {
 
 form {
     width: 100%;
+
+    input, .gj-textbox-md {
+        font-size: 14px;
+        background-color: map-get($colors, white);
+    }
 }
+
+
+/* REPETITIVE CLASSES */
+ul.social-icons li {
+    display: inline-block;
+
+    &.facebook, &.twitter, &.tumblr, &.pinterest {        
+        height: 25px;
+        width: 30px;
+        cursor: pointer;
+    }
+    &.facebook {
+        background: url('../images/fb.png') no-repeat;
+    }
+
+    &.twitter {
+        background: url('../images/twitter.png') no-repeat;
+    }
+
+    &.tumblr {
+        background: url('../images/tumblr.png') no-repeat;
+    }
+
+    &.pinterest {
+        background: url('../images/pinterest.png') no-repeat;
+    }
+}
+
+button, .nav-search, .toTopbutton {
+    cursor: pointer
+}
+
 
 /* HELPER CLASSES */
 .green {
     color: #1dd2af;
 }
 
+
+/* DATEPICKER OVERWRITE CSS*/
+.gj-icon {
+    display: none;
+}
+
+.gj-picker {
+    width: 308px;
+}
+
+.gj-picker-md table tr td.selected.gj-cursor-pointer div {
+    background: map-get($colors, primary) !important;
+}

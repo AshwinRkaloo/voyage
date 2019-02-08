@@ -177,7 +177,7 @@
     align-self: $align;
 }
 
-@mixin button($padding:15px, $background: transparent, $border: 2px solid #fff, $fontSize: 20px, $borderRadius: 4px) {
+@mixin button($padding:15px, $background: transparent, $border: 2px solid #fff, $fontSize: 16px, $borderRadius: 4px) {
     padding: $padding;
     background: $background;
     border: $border;
@@ -192,5 +192,6 @@
 
     &:active, &:hover {
         background: map-get($colors, secondary);
+        border-color: map-get($colors, secondary);
     }
 }

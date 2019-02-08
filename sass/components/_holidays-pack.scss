@@ -4,33 +4,78 @@
     display: flex;
     align-items: center;
 
-    h5 {
-        color: #b2b2b2;
-        font-size: 18px;
+    &-title {
+        position: relative;
+
+        h5 {
+            color: #b2b2b2;
+            font-size: 18px;
+        }
         span {
             color: #fff;
             font-size: 24px;
             display: block;
         }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            right: 20px;
+            width: 1px;
+            height: 102px;
+            background: map-get($colors, list-sep);   
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            right: 17px;
+            bottom: 10px;
+            transform: rotate(-45deg);
+            box-shadow: 1px 1px map-get($colors, list-sep);
+            background: map-get($colors, primary);
+        }
     }
 
     label {
-        color: #b2b2b2;
+        color: map-get($colors, pale_text);
         margin-right: 15px;
     }
 
     input[type="text"] {
         padding: 15px;
-        width: 300px;       
+        width: 280px;       
         border: none;
-        background-image: url('../images/world.png');
-        background-repeat: no-repeat;
-        background-position: 97% 50%;        
+        position: relative;
+                
+
+        &.destination {           
+            background-image: url('../images/world.png');
+            background-position: 95% 50%;
+            background-repeat: no-repeat;
+        }
+
+        &.date {
+            background-image: url('../images/calendar.png');
+            background-position: 95% 50%;
+            background-repeat: no-repeat;
+            background-color: map-get($colors, white);
+
+        }
     }
 
-    button.mybutton {
-        @include button(10px 25px, map-get($colors, secondary), 2px solid map-get($colors, secondary), 20px, 0);
-        margin: 0;
+    form {
+        .mybutton {
+            @include button(11px 25px, map-get($colors, secondary), 2px solid map-get($colors, secondary), 16px, 0);
+            margin: 0;
+        }
+
+        .datepicker-bloc {
+            display: flex;
+        }
     }
     
     
