@@ -127,6 +127,33 @@ footer {
             
         }
 
-        
+    }
+}
+
+
+
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 1199px) {
+    footer {
+        .tags {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+   footer {
+       .latest_news, .tags, .address-bloc {
+            margin: 20px 0;
+       }
+
+   }
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        ul.footer-menu li {
+            padding-bottom: 10px;
+        }
     }
 }

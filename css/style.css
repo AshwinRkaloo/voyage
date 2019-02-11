@@ -4,6 +4,14 @@
 /* BORDER-RADIUS */
 /* GRADIENT */
 /* SASS COLORS */
+form {
+  width: 100%; }
+  form input, form .gj-textbox-md {
+    font-size: 14px;
+    background-color: #fff; }
+  form input[type="text"] {
+    width: 100%; }
+
 /* BASE */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -68,12 +76,6 @@ h1, h2 h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-bottom: 10px; }
 
-form {
-  width: 100%; }
-  form input, form .gj-textbox-md {
-    font-size: 14px;
-    background-color: #fff; }
-
 /* REPETITIVE CLASSES */
 ul.social-icons li {
   display: inline-block; }
@@ -96,6 +98,9 @@ button, .nav-search, .toTopbutton {
 /* HELPER CLASSES */
 .green {
   color: #1dd2af; }
+
+.container {
+  padding: 0 0.5rem !important; }
 
 /* DATEPICKER OVERWRITE CSS*/
 .gj-icon {
@@ -178,9 +183,14 @@ button, .nav-search, .toTopbutton {
   color: #fff;
   position: relative;
   /* BX CSS OVERWRITE */ }
+  .banner .banner-slider-bloc .slide1 {
+    background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner.png"); }
+  .banner .banner-slider-bloc .slide2 {
+    background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner2.jpg"); }
   .banner .banner-slider-bloc .slide1, .banner .banner-slider-bloc .slide2 {
     height: 800px;
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
     .banner .banner-slider-bloc .slide1 .text-bloc, .banner .banner-slider-bloc .slide2 .text-bloc {
       position: absolute;
       top: 50%;
@@ -209,10 +219,6 @@ button, .nav-search, .toTopbutton {
           .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton.active, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton.active {
             background: #1dd2af;
             border: 2px solid #1dd2af; }
-  .banner .banner-slider-bloc .slide1 {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner.png") no-repeat; }
-  .banner .banner-slider-bloc .slide2 {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner2.jpg") no-repeat; }
   .banner .bx-wrapper {
     border: 0;
     height: 800px;
@@ -282,9 +288,23 @@ button, .nav-search, .toTopbutton {
     .holidays_pack form .mybutton:active, .holidays_pack form .mybutton:hover {
       background: #1dd2af;
       border-color: #1dd2af; }
-  .holidays_pack form .datepicker-bloc {
+  .holidays_pack .datepicker-bloc {
     display: flex; }
 
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 1199px) {
+  .holidays_pack input[type="text"] {
+    width: 230px; } }
+@media only screen and (max-width: 1023px) {
+  .holidays_pack input[type="text"] {
+    width: 90%;
+    margin: 20px 0; }
+  .holidays_pack .holidays_pack-title:before, .holidays_pack .holidays_pack-title:after {
+    display: none; }
+  .holidays_pack .datepicker-bloc {
+    display: block; }
+    .holidays_pack .datepicker-bloc label {
+      min-width: 50px; } }
 .special_offers {
   padding: 80px 0 120px; }
   .special_offers .bloc-text h6 {
@@ -303,7 +323,7 @@ button, .nav-search, .toTopbutton {
       border-radius: 5px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
-      width: 270px;
+      width: 15%;
       background: #eeeeee;
       transition: transform 0.3s ease-out, background 0.2s ease-out; }
       .special_offers .card-offers-bloc:hover {
@@ -320,11 +340,29 @@ button, .nav-search, .toTopbutton {
         .special_offers .card-offers-bloc-detail h5 {
           font-size: 20px;
           text-transform: initial;
-          color: #4d4d4d; }
+          color: #4d4d4d;
+          min-height: 30px; }
         .special_offers .card-offers-bloc-detail p {
           font-size: 16px;
           color: #b2b2b2; }
 
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 1199px) {
+  .special_offers .card-offers {
+    display: inline-block;
+    text-align: center; }
+    .special_offers .card-offers-bloc {
+      width: 25%;
+      margin: 15px;
+      display: inline-block; }
+      .special_offers .card-offers-bloc-detail h5, .special_offers .card-offers-bloc-detail p {
+        text-align: left; } }
+@media only screen and (max-width: 640px) {
+  .special_offers .card-offers-bloc {
+    width: 90%;
+    margin: 10px; }
+    .special_offers .card-offers-bloc-detail h5 {
+      font-size: 16px; } }
 .holidays_type {
   background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url("../images/holiday_type_bg.png") no-repeat;
   filter: grayscale(50%);
@@ -332,8 +370,6 @@ button, .nav-search, .toTopbutton {
   background-position: 0 31%;
   height: 350px;
   padding: 120px 0; }
-  .holidays_type-row {
-    margin-top: 50px; }
   .holidays_type .bloc-text {
     margin-bottom: 50px; }
     .holidays_type .bloc-text h6 {
@@ -347,20 +383,34 @@ button, .nav-search, .toTopbutton {
     -moz-border-radius: 50%;
     border: 5px solid #fff;
     background: transparent;
-    height: 160px;
-    width: 160px;
+    height: 150px;
+    width: 150px;
     position: relative; }
     .holidays_type-category img {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-  .holidays_type-name {
-    color: #9dafc0;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 20px; }
+    .holidays_type-category-name {
+      text-align: center;
+      color: #9dafc0;
+      font-size: 20px;
+      margin-top: 35px; }
 
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 1199px) {
+  .holidays_type {
+    height: auto; }
+    .holidays_type .bloc-text {
+      margin: 20px; }
+    .holidays_type-category {
+      width: 110px;
+      height: 110px;
+      margin: 20px auto; }
+      .holidays_type-category img {
+        max-width: 70%; }
+      .holidays_type-category-name {
+        margin: 35px 0; } }
 .happy_client {
   padding: 80px 0 30px;
   /* BX SILDER OVERWRITE CLASSES */ }
@@ -419,6 +469,7 @@ button, .nav-search, .toTopbutton {
   .happy_client .bx-viewport {
     height: 260px !important; }
 
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
 footer {
   background: #2c3e50;
   padding: 80px 0;
@@ -532,5 +583,16 @@ footer {
         content: '****';
         position: absolute;
         padding-left: 5px; }
+
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 1199px) {
+  footer .tags {
+    margin-top: 30px; } }
+@media only screen and (max-width: 1023px) {
+  footer .latest_news, footer .tags, footer .address-bloc {
+    margin: 20px 0; } }
+@media only screen and (max-width: 767px) {
+  footer ul.footer-menu li {
+    padding-bottom: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

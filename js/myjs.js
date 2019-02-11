@@ -28,9 +28,7 @@ $(function(){
         auto: true,
         speed: 500,
         pause: 2000,
-        //slideWidth: 475,
-        //maxSlides: 5,
-        //slideMargin: 20,
+        useCSS: false,
         moveSlides: 1,
         autoHover: true,
         pager: false        

@@ -72,11 +72,41 @@
             @include button(11px 25px, map-get($colors, secondary), 2px solid map-get($colors, secondary), 16px, 0);
             margin: 0;
         }
-
-        .datepicker-bloc {
-            display: flex;
-        }
+        
     }
     
-    
+    .datepicker-bloc {
+        display: flex;
+    }
+}
+
+
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 1199px) {
+    .holidays_pack {
+        input[type="text"] {
+            width: 230px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .holidays_pack {
+
+        input[type="text"] {
+            width: 90%;
+            margin: 20px 0;
+        }
+
+        .holidays_pack-title:before, .holidays_pack-title:after {
+            display: none;
+        }
+
+        .datepicker-bloc {
+            display: block;
+            label {
+                min-width: 50px;
+            }
+        }
+    }
 }

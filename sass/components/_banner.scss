@@ -6,10 +6,19 @@
 
     .banner-slider-bloc {
 
+        .slide1 {
+            background-image: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner.png');
+        }
+
+        .slide2 {
+            background-image: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner2.jpg');
+        }
+        
         .slide1, .slide2 {
 
             height: 800px;
             background-size: cover;
+            background-repeat: no-repeat;
 
             .text-bloc {
                 position: absolute;
@@ -34,16 +43,11 @@
                     }
                 }                    
                             
-            }
+            }            
+    
         }
         
-        .slide1 {
-            background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner.png') no-repeat;
-        }
-
-        .slide2 {
-            background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner2.jpg') no-repeat;
-        }
+        
         
     }
 

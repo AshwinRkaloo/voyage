@@ -25,7 +25,7 @@
         &-bloc {
             border: 5px solid #eeeeee;
             @include border-radius(5px);
-            width: 270px;
+            width: 15%;
             background: map-get($colors, pale_bg);
             transition: transform 0.3s ease-out, background 0.2s ease-out;
 
@@ -46,11 +46,13 @@
             &-detail {
                 background: inherit;
                 padding: 10px;
+                
 
                 h5 {
                     font-size: 20px;
                     text-transform: initial;
                     color: map-get($colors, text);
+                    min-height: 30px;
                 }
 
                 p {
@@ -58,6 +60,37 @@
                     color: map-get($colors, pale_text);
                 }
             }
+        }
+    }
+}
+
+
+
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 1199px) {
+    .special_offers .card-offers {
+        display: inline-block;
+        text-align: center;
+
+        &-bloc {
+            width: 25%;
+            margin: 15px;
+            display: inline-block;
+
+            &-detail h5, &-detail p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .special_offers .card-offers-bloc {
+        width: 90%;
+        margin: 10px;
+
+        &-detail h5 {
+            font-size: 16px;
         }
     }
 }

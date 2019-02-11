@@ -1,0 +1,12 @@
+form {
+    width: 100%;
+
+    input, .gj-textbox-md {
+        font-size: 14px;
+        background-color: map-get($colors, white);
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}

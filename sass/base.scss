@@ -25,15 +25,6 @@ h1, h2 h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
-form {
-    width: 100%;
-
-    input, .gj-textbox-md {
-        font-size: 14px;
-        background-color: map-get($colors, white);
-    }
-}
-
 
 /* REPETITIVE CLASSES */
 ul.social-icons li {
@@ -68,8 +59,13 @@ button, .nav-search, .toTopbutton {
 
 /* HELPER CLASSES */
 .green {
-    color: #1dd2af;
+    color: map-get($colors, secondary);
 }
+
+.container {
+    padding: 0 0.5rem !important;
+}
+
 
 
 /* DATEPICKER OVERWRITE CSS*/
