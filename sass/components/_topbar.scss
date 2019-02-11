@@ -59,3 +59,25 @@
         }
     }
 }
+
+
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .topbar {
+        
+        ul.social-icons {
+                margin-top: 20px;
+       
+                li:after, li:before {
+                    display: none;
+                }
+        }
+
+        ul.top-login {
+            
+                li:after, li:before {
+                        display: none;
+                }
+        }
+    }
+}
