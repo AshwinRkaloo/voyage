@@ -102,6 +102,9 @@ button, .nav-search, .toTopbutton {
 .container {
   padding: 0 0.5rem !important; }
 
+.active {
+  display: block; }
+
 /* DATEPICKER OVERWRITE CSS*/
 .gj-icon {
   display: none; }
@@ -165,7 +168,8 @@ button, .nav-search, .toTopbutton {
       background: #17202a; }
 
 .navbar {
-  padding: 20px 0; }
+  padding: 20px 0;
+  position: relative; }
   .navbar nav ul {
     display: flex;
     align-items: center;
@@ -179,10 +183,34 @@ button, .nav-search, .toTopbutton {
         color: #4d4d4d; }
         .navbar nav ul li a:active, .navbar nav ul li a:hover {
           color: #1dd2af; }
+  .navbar .toggle {
+    width: 30px;
+    height: 5px;
+    background: #2c3e50;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    display: none; }
+    .navbar .toggle:before, .navbar .toggle:after {
+      content: '';
+      width: 30px;
+      height: 5px;
+      background: #2c3e50;
+      position: absolute; }
+    .navbar .toggle:before {
+      top: -10px; }
+    .navbar .toggle:after {
+      top: 10px; }
   .navbar .nav-search {
     margin-left: 40px;
     cursor: pointer; }
 
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+  .navbar nav ul {
+    display: none; }
+  .navbar .toggle {
+    display: block; } }
 .banner {
   background-size: cover;
   height: 800px;
