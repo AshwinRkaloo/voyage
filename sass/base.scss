@@ -62,13 +62,29 @@ button, .nav-search, .toTopbutton {
     color: map-get($colors, secondary);
 }
 
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .show-xs {
+        display: block !important;
+    }
+    
+    .hide-xs {
+        display: none !important;
+    }
+}
+
 .container {
     padding: 0 0.5rem !important;
 }
 
-.active {
-    display: block;
-}
+
 
 
 

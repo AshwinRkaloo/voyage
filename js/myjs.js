@@ -1,8 +1,8 @@
 /* MENU RESPONSIVE */
 
-// $('.toggle').click(function() {
-//     $(ul).toggleClass('active')
-// })
+$('.toggle').click(function() {
+    $('ul.main-menu').toggleClass('active');
+})
 
 
 /* TO TOP BUTTON */

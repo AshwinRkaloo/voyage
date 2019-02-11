@@ -99,11 +99,20 @@ button, .nav-search, .toTopbutton {
 .green {
   color: #1dd2af; }
 
+.show {
+  display: block !important; }
+
+.hide {
+  display: none !important; }
+
+@media only screen and (max-width: 767px) {
+  .show-xs {
+    display: block !important; }
+
+  .hide-xs {
+    display: none !important; } }
 .container {
   padding: 0 0.5rem !important; }
-
-.active {
-  display: block; }
 
 /* DATEPICKER OVERWRITE CSS*/
 .gj-icon {
@@ -180,9 +189,21 @@ button, .nav-search, .toTopbutton {
       .navbar nav ul li a {
         text-decoration: none;
         text-transform: uppercase;
-        color: #4d4d4d; }
-        .navbar nav ul li a:active, .navbar nav ul li a:hover {
+        color: #4d4d4d;
+        position: relative; }
+        .navbar nav ul li a:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background: #1dd2af;
+          transition: width 0.5s ease-in-out; }
+        .navbar nav ul li a:hover {
           color: #1dd2af; }
+          .navbar nav ul li a:hover:after {
+            width: 100%; }
   .navbar .toggle {
     width: 30px;
     height: 5px;
@@ -208,8 +229,36 @@ button, .nav-search, .toTopbutton {
 /* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
   .navbar nav ul {
-    display: none; }
+    display: none;
+    height: auto;
+    background: #2c3e50;
+    padding: 15px 0;
+    margin-top: 20px; }
+    .navbar nav ul li {
+      text-align: center;
+      font-size: 20px;
+      padding: 25px 0; }
+      .navbar nav ul li a {
+        color: #fff;
+        position: relative; }
+        .navbar nav ul li a:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 3px;
+          background: #1dd2af;
+          transition: width 0.5s ease-in-out; }
+        .navbar nav ul li a:active > .navbar nav ul li a:after {
+          width: 50px; }
+  .navbar nav ul.top-login li {
+    padding: 15px 0; }
+    .navbar nav ul.top-login li a {
+      font-size: 16px; }
   .navbar .toggle {
+    display: block; }
+  .navbar .active {
     display: block; } }
 .banner {
   background-size: cover;
@@ -257,7 +306,11 @@ button, .nav-search, .toTopbutton {
 @media only screen and (max-width: 640px) {
   .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton {
     display: block;
-    margin: 20px 0; } }
+    margin: 20px 0; }
+  .banner .banner-slider-bloc .text-bloc h1 {
+    font-size: 56px; }
+  .banner .banner-slider-bloc .text-bloc p.banner_subtitle {
+    font-weight: 28px; } }
 .holidays_pack {
   background: #2c3e50;
   padding: 25px 0;
@@ -502,7 +555,8 @@ button, .nav-search, .toTopbutton {
     box-shadow: none;
     height: 250px; }
   .happy_client .bx-viewport {
-    height: 260px !important; }
+    height: 260px !important;
+    margin-top: 20px; }
 
 /* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
 @media only screen and (max-width: 360px) {
