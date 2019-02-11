@@ -112,6 +112,12 @@ button, .nav-search, .toTopbutton {
 .gj-picker-md table tr td.selected.gj-cursor-pointer div {
   background: #2c3e50 !important; }
 
+/* BX CSS OVERWRITE */
+.bx-wrapper {
+  border: 0 !important;
+  height: 800px;
+  box-shadow: none !important; }
+
 /* COMPONENTS */
 .topbar {
   background: #2c3e50;
@@ -181,8 +187,7 @@ button, .nav-search, .toTopbutton {
   background-size: cover;
   height: 800px;
   color: #fff;
-  position: relative;
-  /* BX CSS OVERWRITE */ }
+  position: relative; }
   .banner .banner-slider-bloc .slide1 {
     background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner.png"); }
   .banner .banner-slider-bloc .slide2 {
@@ -219,11 +224,12 @@ button, .nav-search, .toTopbutton {
           .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton.active, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton.active {
             background: #1dd2af;
             border: 2px solid #1dd2af; }
-  .banner .bx-wrapper {
-    border: 0;
-    height: 800px;
-    box-shadow: none; }
 
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 640px) {
+  .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton {
+    display: block;
+    margin: 20px 0; } }
 .holidays_pack {
   background: #2c3e50;
   padding: 25px 0;
@@ -465,11 +471,15 @@ button, .nav-search, .toTopbutton {
         color: #b2b2b2; }
   .happy_client .bx-wrapper {
     border: 0;
-    box-shadow: none; }
+    box-shadow: none;
+    height: 250px; }
   .happy_client .bx-viewport {
     height: 260px !important; }
 
 /* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 360px) {
+  .happy_client .bx-viewport {
+    height: 280px !important; } }
 footer {
   background: #2c3e50;
   padding: 80px 0;

@@ -51,10 +51,20 @@
         
     }
 
-    /* BX CSS OVERWRITE */
-    .bx-wrapper {
-        border: 0;
-        height: 800px;
-        box-shadow: none;
+    
+}
+
+
+
+/* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
+@media only screen and (max-width: 640px) {
+    .banner .banner-slider-bloc {
+
+        .slide1 .text-bloc .cta-bloc .mybutton, .slide2 .text-bloc .cta-bloc .mybutton {
+            display: block;
+            margin: 20px 0;
+        }
     }
 }
+
+

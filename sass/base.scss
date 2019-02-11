@@ -80,3 +80,11 @@ button, .nav-search, .toTopbutton {
 .gj-picker-md table tr td.selected.gj-cursor-pointer div {
     background: map-get($colors, primary) !important;
 }
+
+
+/* BX CSS OVERWRITE */
+.bx-wrapper {
+    border: 0 !important;
+    height: 800px;
+    box-shadow: none !important;
+}

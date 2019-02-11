@@ -81,6 +81,7 @@
     .bx-wrapper {
         border: 0;
         box-shadow: none;
+        height: 250px;
     }
 
     .bx-viewport {
@@ -99,6 +100,8 @@
     
 }
 
-@media only screen and (max-width: 767px) {
-    
+@media only screen and (max-width: 360px) {
+    .happy_client .bx-viewport {
+        height: 280px !important;
+    }
 }
