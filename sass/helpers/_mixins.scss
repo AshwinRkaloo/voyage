@@ -57,11 +57,11 @@
 // - applies to: flex items
 // <positive-number>, initial, auto, or none
 @mixin flex($values) {
-                -webkit-box-flex: $values;
-                    -moz-box-flex: $values;
-                    -webkit-flex: $values;
-                                    -ms-flex: $values;
-                                        flex: $values;
+    -webkit-box-flex: $values;
+    -moz-box-flex: $values;
+    -webkit-flex: $values;
+    -ms-flex: $values;
+    flex: $values;
 }
 
 // Flex Flow Direction
@@ -195,3 +195,11 @@
         border-color: map-get($colors, secondary);
     }
 }
+
+// CSS FOR PLACEHOLDER
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+  }

@@ -8,5 +8,12 @@ form {
 
     input[type="text"] {
         width: 100%;
+        background: transparent;
+
+        @include placeholder {
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+        }
+        
     }
 }

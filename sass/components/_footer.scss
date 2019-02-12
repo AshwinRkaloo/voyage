@@ -116,15 +116,12 @@ footer {
                 content: '::';
                 position: absolute;
                 padding-left: 5px;
-            }
-
-            &:after:last-of-type {
-                content: '****';
-                position: absolute;
-                padding-left: 5px;
-            }
-
+            }           
             
+        }
+
+        &:last-of-type a:after {
+            display: none;
         }
 
     }

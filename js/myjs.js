@@ -5,6 +5,18 @@ $('.toggle').click(function() {
 })
 
 
+/* ACTIVATE SEARCH BAR */
+
+$('.nav-search').on("click", ".search-toggle", function() {
+    $('.input-search').toggleClass('show');
+    $('.input-search').addClass('animated bounceInRight');
+    var src = ($(this).attr('src') === 'images/search.png')
+    ? 'images/close.png'
+    : 'images/search.png';
+    $(this).attr('src', src);
+})
+
+
 /* TO TOP BUTTON */
 $(function(){ 
     $(window).scroll(function(){ 
