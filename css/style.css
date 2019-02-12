@@ -144,7 +144,30 @@ button, .nav-search, .toTopbutton {
   border: 0 !important;
   height: 800px;
   box-shadow: none !important; }
+  .bx-wrapper .bx-controls-direction a {
+    width: 80px !important;
+    height: 80px !important; }
+    .bx-wrapper .bx-controls-direction a.bx-prev, .bx-wrapper .bx-controls-direction a.bx-next {
+      transition: all 0.5s ease-out; }
+      .bx-wrapper .bx-controls-direction a.bx-prev img, .bx-wrapper .bx-controls-direction a.bx-next img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5; }
+      .bx-wrapper .bx-controls-direction a.bx-prev:hover, .bx-wrapper .bx-controls-direction a.bx-next:hover {
+        background: #1dd2af !important; }
+        .bx-wrapper .bx-controls-direction a.bx-prev:hover img, .bx-wrapper .bx-controls-direction a.bx-next:hover img {
+          opacity: 1; }
+  .bx-wrapper .bx-prev {
+    left: 0 !important; }
+  .bx-wrapper .bx-next {
+    right: 0 !important; }
 
+@media only screen and (max-width: 767px) {
+  .bx-wrapper .bx-controls-direction a {
+    width: 55px !important;
+    height: 55px !important; } }
 /* COMPONENTS */
 .topbar {
   background: #2c3e50;
@@ -239,18 +262,27 @@ button, .nav-search, .toTopbutton {
           .navbar nav ul li a:hover:after {
             width: 100%; }
       .navbar nav ul li .nav-search {
-        margin-left: 40px;
         cursor: pointer;
-        position: relative; }
+        position: relative;
+        width: 50px;
+        height: 50px; }
         .navbar nav ul li .nav-search .input-search {
-          display: none; }
+          display: none;
+          position: absolute;
+          top: 0;
+          right: 60px; }
           .navbar nav ul li .nav-search .input-search input[type="text"] {
             padding: 15px;
             width: 600px;
-            border: 1px solid #2c3e50;
-            position: absolute;
-            right: 50px;
-            top: -45px; }
+            border: 1px solid #2c3e50; }
+        .navbar nav ul li .nav-search .search-toggle {
+          background: url(../../images/search.png) no-repeat;
+          display: block;
+          height: 50px;
+          width: 50px;
+          position: absolute;
+          top: 0;
+          right: 0; }
   .navbar .toggle {
     width: 30px;
     height: 5px;
@@ -272,43 +304,58 @@ button, .nav-search, .toTopbutton {
 
 /* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
 @media only screen and (max-width: 1199px) {
-  .navbar .nav-search .input-search input[type="text"] {
-    width: 660px; } }
+  .navbar nav ul li .nav-search {
+    margin-left: 0; }
+    .navbar nav ul li .nav-search .input-search input[type="text"] {
+      width: 660px; } }
+@media only screen and (max-width: 1023px) {
+  .navbar nav {
+    margin-top: 25px; } }
 @media only screen and (max-width: 767px) {
-  .navbar nav ul {
-    display: none;
-    height: auto;
-    background: #2c3e50;
-    padding: 15px 0;
-    margin-top: 20px; }
-    .navbar nav ul li {
-      text-align: center;
-      font-size: 20px;
-      padding: 25px 0; }
-      .navbar nav ul li a {
-        color: #fff;
-        position: relative; }
-        .navbar nav ul li a:after {
-          content: '';
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          width: 0;
-          height: 3px;
-          background: #1dd2af;
-          transition: width 0.5s ease-in-out; }
-        .navbar nav ul li a:active > .navbar nav ul li a:after {
-          width: 50px; }
-  .navbar nav ul.top-login li {
-    padding: 15px 0; }
-    .navbar nav ul.top-login li a {
-      font-size: 16px; }
+  .navbar nav {
+    margin: 0; }
+    .navbar nav ul {
+      display: none;
+      height: auto;
+      background: #2c3e50;
+      padding: 15px 0;
+      margin-top: 20px; }
+      .navbar nav ul li {
+        text-align: center;
+        font-size: 20px;
+        padding: 25px 0; }
+        .navbar nav ul li a {
+          color: #fff;
+          position: relative; }
+          .navbar nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #1dd2af;
+            transition: width 0.5s ease-in-out; }
+          .navbar nav ul li a:active > .navbar nav ul li a:after {
+            width: 50px; }
+        .navbar nav ul li .nav-search .input-search {
+          display: block; }
+          .navbar nav ul li .nav-search .input-search input[type="text"] {
+            width: 100%;
+            right: 0; }
+        .navbar nav ul li .nav-search .search-toggle {
+          background: url(../../images/search_white.png) no-repeat;
+          display: none; }
+    .navbar nav nav ul.top-login li {
+      padding: 15px 0; }
+      .navbar nav nav ul.top-login li a {
+        font-size: 16px; }
+    .navbar nav .nav-search {
+      margin: 5px 5px 0 0; }
   .navbar .toggle {
     display: block; }
   .navbar .active {
-    display: block; }
-  .navbar .nav-search {
-    margin: 5px 5px 0 0; } }
+    display: block; } }
 .banner {
   background-size: cover;
   height: 800px;

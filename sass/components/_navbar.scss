@@ -42,21 +42,31 @@
             }
 
             .nav-search {
-                margin-left: 40px;
                 cursor: pointer;
                 position: relative;
+                width: 50px;
+                height: 50px;
         
                 .input-search {
                     display: none;
+                    position: absolute;                    
+                    top: 0;
+                    right: 60px;
             
                     input[type="text"] {
                         padding: 15px;
                         width: 600px;
-                        border: 1px solid map-get($colors, primary);
-                        position: absolute;
-                        right: 50px;
-                        top: -45px;                
+                        border: 1px solid map-get($colors, primary);                    
                     }
+                }
+                .search-toggle {
+                    background: url(../../images/search.png) no-repeat;
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                 }
             }
         }
@@ -97,53 +107,92 @@
 
 @media only screen and (max-width: 1199px) {
 
-    .navbar .nav-search .input-search input[type="text"] {
-        width: 660px;
+    .navbar nav ul li .nav-search {
+        margin-left: 0;
+
+        .input-search input[type="text"] {
+            width: 660px;
+        }
     }
 
 }
+
+
+@media only screen and (max-width: 1023px) {
+    .navbar nav{
+        margin-top: 25px;
+    }
+}
+
+
 @media only screen and (max-width: 767px) {
     .navbar {
-        nav ul {
-            display: none;
-            height: auto;
-            background: map-get($colors, primary);
-            padding: 15px 0;
-            margin-top: 20px;
+        nav {
+            margin: 0; 
+            ul {
+                display: none;
+                height: auto;
+                background: map-get($colors, primary);
+                padding: 15px 0;
+                margin-top: 20px;
 
-            li {
-                text-align:  center;
-                font-size: 20px;                    
-                padding: 25px 0;                
-                a {
-                    color: map-get($colors, white);
-                    position: relative;
-                    
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        bottom: -5px;
-                        left: 0;
-                        width: 0;
-                        height: 3px;
-                        background: map-get($colors, secondary);
-                        transition: width 0.5s ease-in-out;
+                li {
+                    text-align:  center;
+                    font-size: 20px;                    
+                    padding: 25px 0;                
+                    a {
+                        color: map-get($colors, white);
+                        position: relative;
+                        
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: -5px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background: map-get($colors, secondary);
+                            transition: width 0.5s ease-in-out;
+                        }
+
+                        &:active >  &:after {
+                            width: 50px;
+                        }
                     }
 
-                    &:active >  &:after {
-                        width: 50px;
+                    .nav-search {
+                        .input-search {
+                            display: block;
+
+                            input[type="text"] {
+                                width: 100%;
+                                right: 0;
+                            }
+                        }
+                        .search-toggle {
+                            background: url(../../images/search_white.png) no-repeat;
+                            // display: block;
+                            // top: -40px;
+                            // left: 36%;
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+
+            nav ul.top-login {
+                li {
+                    padding: 15px 0; 
+                    a {
+                        font-size: 16px;
                     }
                 }
             }
+            
 
-        }
-
-        nav ul.top-login {
-            li {
-                padding: 15px 0; 
-                a {
-                    font-size: 16px;
-                }
+            .nav-search {
+                margin: 5px 5px 0 0;
             }
         }
 
@@ -153,10 +202,6 @@
 
         .active {
             display: block;
-        }
-
-        .nav-search {
-            margin: 5px 5px 0 0;
         }
 
     }

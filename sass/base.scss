@@ -108,5 +108,47 @@ button, .nav-search, .toTopbutton {
 .bx-wrapper {
     border: 0 !important;
     height: 800px;
-    box-shadow: none !important;
+    box-shadow: none !important;    
+
+    .bx-controls-direction a {
+        width: 80px !important;
+        height: 80px !important;
+
+        &.bx-prev, &.bx-next {  
+            transition: all 0.5s ease-out;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0.5;
+            }
+            &:hover {
+                background: map-get($colors, secondary) !important;
+
+                img {
+                    opacity: 1; 
+                }
+            }
+        }
+        
+    }
+
+    .bx-prev {
+        left: 0 !important;
+    }
+
+    .bx-next {
+        right: 0 !important;
+    }
 }
+
+
+@media only screen and (max-width: 767px) {
+    .bx-wrapper .bx-controls-direction a {
+        width: 55px !important;
+        height: 55px !important;
+    }
+}
+

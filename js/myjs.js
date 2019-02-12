@@ -10,10 +10,11 @@ $('.toggle').click(function() {
 $('.nav-search').on("click", ".search-toggle", function() {
     $('.input-search').toggleClass('show');
     $('.input-search').addClass('animated bounceInRight');
-    var src = ($(this).attr('src') === 'images/search.png')
-    ? 'images/close.png'
-    : 'images/search.png';
-    $(this).attr('src', src);
+    (this).css('backgroundImage', 'url(images/close.png)');
+    // var src = ($(this).attr('src') === 'images/search.png')
+    // ? 'images/close.png'
+    // : 'images/search.png';
+    // $(this).attr('src', src);
 })
 
 
@@ -43,7 +44,9 @@ $(function(){
         useCSS: false,
         moveSlides: 1,
         autoHover: true,
-        pager: false        
+        pager: false,
+        nextText: '<img src="images/next.png" height="28" width="17"/>',
+        prevText: '<img src="images/prev.png" height="28" width="17"/>'        
     })
 });
 
