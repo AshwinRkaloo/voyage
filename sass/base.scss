@@ -115,13 +115,14 @@ button, .nav-search, .toTopbutton {
         height: 80px !important;
 
         &.bx-prev, &.bx-next {  
-            transition: all 0.5s ease-out;
+            @include transition(width, 0.5s, ease-in-out); 
+            
 
             img {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                @include transform(translate(-50%, -50%));
                 opacity: 0.5;
             }
             &:hover {

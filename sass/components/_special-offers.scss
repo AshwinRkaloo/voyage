@@ -13,24 +13,24 @@
     }
 
     .card-offers {
-        display: flex;
+        @include flexbox();
         margin-top: 40px;
         text-align: left;
 
         &:hover .card-offers-bloc:not(:hover) {
-            transform: scale(0.8);
+            @include transform(scale(0.8));
             opacity: 0.7;
         }
         
         &-bloc {
-            border: 5px solid #eeeeee;
+            border: 5px solid map-get($colors, pale_bg);
             @include border-radius(5px);
             width: 15%;
             background: map-get($colors, pale_bg);
-            transition: transform 0.3s ease-out, background 0.2s ease-out;
+            @include transition(background, 0.2s, ease-out);
 
             &:hover {
-                transform: scale(1.1);
+                @include transform(scale(1.1));
                 border: 5px solid map-get($colors, secondary);
                 background: map-get($colors, primary);
 

@@ -1,10 +1,10 @@
 .topbar {
-    background: #2c3e50;
+    background:map-get($colors, primary);
     padding: 10px 0;
 
     ul.top-login {
-        display: flex;
-        align-items: center;
+        @include flexbox();
+        @include align-items(center);
         margin-top: 5px;      
         
         li {
@@ -34,8 +34,8 @@
         }
     }
 
-    ul.social-icons li {        
-        transform: scale(0.8);
+    ul.social-icons li {
+        @include transform(scale(0.8));
         padding: 0 10px;
 
         &:after {
@@ -66,18 +66,18 @@
     .topbar {
         
         ul.social-icons {
-                margin-top: 20px;
-       
-                li:after, li:before {
-                    display: none;
-                }
+            margin-top: 20px;
+    
+            li:after, li:before {
+                display: none;
+            }
         }
 
         ul.top-login {
             
-                li:after, li:before {
-                        display: none;
-                }
+            li:after, li:before {
+                    display: none;
+            }
         }
     }
 }

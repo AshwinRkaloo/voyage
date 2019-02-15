@@ -1,8 +1,11 @@
 /* HELPERS */
 /* BOX-SHADOW */
 /* TRANSITION */
+/* TRANSFORM */
 /* BORDER-RADIUS */
 /* GRADIENT */
+/* MIXIN BUTTONS */
+/* FILTER */
 /* SASS COLORS */
 form {
   width: 100%; }
@@ -148,11 +151,17 @@ button, .nav-search, .toTopbutton {
     width: 80px !important;
     height: 80px !important; }
     .bx-wrapper .bx-controls-direction a.bx-prev, .bx-wrapper .bx-controls-direction a.bx-next {
-      transition: all 0.5s ease-out; }
+      -webkit-transition: width 0.5s ease-in-out;
+      -moz-transition: width 0.5s ease-in-out;
+      transition: width 0.5s ease-in-out; }
       .bx-wrapper .bx-controls-direction a.bx-prev img, .bx-wrapper .bx-controls-direction a.bx-next img {
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         opacity: 0.5; }
       .bx-wrapper .bx-controls-direction a.bx-prev:hover, .bx-wrapper .bx-controls-direction a.bx-next:hover {
@@ -173,7 +182,14 @@ button, .nav-search, .toTopbutton {
   background: #2c3e50;
   padding: 10px 0; }
   .topbar ul.top-login {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
     align-items: center;
     margin-top: 5px; }
     .topbar ul.top-login li {
@@ -195,6 +211,10 @@ button, .nav-search, .toTopbutton {
         width: 1px;
         background: #17202a; }
   .topbar ul.social-icons li {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
     transform: scale(0.8);
     padding: 0 10px; }
     .topbar ul.social-icons li:after {
@@ -256,6 +276,8 @@ button, .nav-search, .toTopbutton {
           width: 0%;
           height: 3px;
           background: #1dd2af;
+          -webkit-transition: width 0.5s ease-in-out;
+          -moz-transition: width 0.5s ease-in-out;
           transition: width 0.5s ease-in-out; }
         .navbar nav ul li a:hover {
           color: #1dd2af; }
@@ -276,13 +298,15 @@ button, .nav-search, .toTopbutton {
             width: 600px;
             border: 1px solid #2c3e50; }
         .navbar nav ul li .nav-search .search-toggle {
-          background: url(../../images/search.png) no-repeat;
+          background: url(../images/search.png) no-repeat;
           display: block;
           height: 50px;
           width: 50px;
           position: absolute;
           top: 0;
           right: 0; }
+          .navbar nav ul li .nav-search .search-toggle.active {
+            background: url(../images/close.png) no-repeat; }
   .navbar .toggle {
     width: 30px;
     height: 5px;
@@ -335,17 +359,27 @@ button, .nav-search, .toTopbutton {
             width: 0;
             height: 3px;
             background: #1dd2af;
+            -webkit-transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
             transition: width 0.5s ease-in-out; }
           .navbar nav ul li a:active > .navbar nav ul li a:after {
             width: 50px; }
-        .navbar nav ul li .nav-search .input-search {
-          display: block; }
-          .navbar nav ul li .nav-search .input-search input[type="text"] {
-            width: 100%;
-            right: 0; }
-        .navbar nav ul li .nav-search .search-toggle {
-          background: url(../../images/search_white.png) no-repeat;
-          display: none; }
+        .navbar nav ul li .nav-search {
+          width: 100%; }
+          .navbar nav ul li .nav-search .input-search {
+            display: block;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: inherit; }
+            .navbar nav ul li .nav-search .input-search input[type="text"] {
+              width: 80%;
+              right: 0; }
+          .navbar nav ul li .nav-search .search-toggle {
+            display: none; }
     .navbar nav nav ul.top-login li {
       padding: 15px 0; }
       .navbar nav nav ul.top-login li a {
@@ -373,6 +407,10 @@ button, .nav-search, .toTopbutton {
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
       .banner .banner-slider-bloc .slide1 .text-bloc .banner_subtitle, .banner .banner-slider-bloc .slide2 .text-bloc .banner_subtitle {
         color: #fff;
@@ -410,7 +448,14 @@ button, .nav-search, .toTopbutton {
 .holidays_pack {
   background: #2c3e50;
   padding: 25px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
   align-items: center; }
   .holidays_pack-title {
     position: relative; }
@@ -436,8 +481,14 @@ button, .nav-search, .toTopbutton {
       height: 10px;
       right: 17px;
       bottom: 10px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
-      box-shadow: 1px 1px #17202a;
+      -webkit-box-shadow: 1px 1px 0px #17202a;
+      -moz-box-shadow: 1px 1px 0px #17202a;
+      box-shadow: 1px 1px 0px #17202a;
       background: #2c3e50; }
   .holidays_pack label {
     color: #b2b2b2;
@@ -473,6 +524,10 @@ button, .nav-search, .toTopbutton {
       background: #1dd2af;
       border-color: #1dd2af; }
   .holidays_pack .datepicker-bloc {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex; }
 
 /* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
@@ -496,21 +551,35 @@ button, .nav-search, .toTopbutton {
   .special_offers .bloc-text p {
     color: #4d4d4d; }
   .special_offers .card-offers {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     margin-top: 40px;
     text-align: left; }
     .special_offers .card-offers:hover .card-offers-bloc:not(:hover) {
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -ms-transform: scale(0.8);
       transform: scale(0.8);
       opacity: 0.7; }
     .special_offers .card-offers-bloc {
       border: 5px solid #eeeeee;
-      border-radius: 5px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
+      border-radius: 5px;
       width: 15%;
       background: #eeeeee;
-      transition: transform 0.3s ease-out, background 0.2s ease-out; }
+      -webkit-transition: background 0.2s ease-out;
+      -moz-transition: background 0.2s ease-out;
+      transition: background 0.2s ease-out; }
       .special_offers .card-offers-bloc:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
         transform: scale(1.1);
         border: 5px solid #1dd2af;
         background: #2c3e50; }
@@ -549,6 +618,9 @@ button, .nav-search, .toTopbutton {
       font-size: 16px; } }
 .holidays_type {
   background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url("../images/holiday_type_bg.png") no-repeat;
+  -webkit-filter: grayscale(50%);
+  -moz-filter: grayscale(50%);
+  -o-filter: grayscale(50%);
   filter: grayscale(50%);
   background-size: cover;
   background-position: 0 31%;
@@ -562,9 +634,9 @@ button, .nav-search, .toTopbutton {
     .holidays_type .bloc-text p {
       color: #9dafc0; }
   .holidays_type-category {
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
+    border-radius: 50%;
     border: 5px solid #fff;
     background: transparent;
     height: 150px;
@@ -574,6 +646,10 @@ button, .nav-search, .toTopbutton {
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
     .holidays_type-category-name {
       text-align: center;
@@ -603,6 +679,10 @@ button, .nav-search, .toTopbutton {
   .happy_client .bloc-text p {
     color: #4d4d4d; }
   .happy_client .slider-testimonials {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     margin-top: 50px; }
     .happy_client .slider-testimonials .slides {
@@ -619,8 +699,14 @@ button, .nav-search, .toTopbutton {
         height: 48px;
         right: 12%;
         bottom: -24px;
+        -webkit-transform: rotate(53deg);
+        -moz-transform: rotate(53deg);
+        -o-transform: rotate(53deg);
+        -ms-transform: rotate(53deg);
         transform: rotate(53deg);
-        box-shadow: 1px 1px #eeeeee;
+        -webkit-box-shadow: 1px 1px 0 #eeeeee;
+        -moz-box-shadow: 1px 1px 0 #eeeeee;
+        box-shadow: 1px 1px 0 #eeeeee;
         background: inherit; }
       .happy_client .slider-testimonials .slides:hover {
         border-top: 4px solid #1dd2af;
@@ -629,13 +715,23 @@ button, .nav-search, .toTopbutton {
         border-right: 1px solid #9dafc0;
         opacity: 1; }
         .happy_client .slider-testimonials .slides:hover p {
+          -webkit-transform: translateY(-2px);
+          -moz-transform: translateY(-2px);
+          -o-transform: translateY(-2px);
+          -ms-transform: translateY(-2px);
           transform: translateY(-2px); }
         .happy_client .slider-testimonials .slides:hover:after {
           width: 48px;
           height: 36px;
           bottom: -17px;
+          -webkit-transform: rotate(36deg);
+          -moz-transform: rotate(36deg);
+          -o-transform: rotate(36deg);
+          -ms-transform: rotate(36deg);
           transform: rotate(36deg);
-          box-shadow: 1px 1px #9dafc0; }
+          -webkit-box-shadow: 1px 1px 0 #17202a;
+          -moz-box-shadow: 1px 1px 0 #17202a;
+          box-shadow: 1px 1px 0 #17202a; }
       .happy_client .slider-testimonials .slides .testimony {
         font-size: 15px;
         line-height: 1.2;
@@ -710,7 +806,14 @@ footer {
     border: none;
     margin-top: 30px; }
   footer .bloc-news {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
     align-items: flex-start;
     margin: 20px 0; }
     footer .bloc-news-img {
@@ -747,6 +850,10 @@ footer {
     position: absolute;
     bottom: 0;
     left: 50%;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
     transform: translate(-50%);
     box-sizing: border-box; }
     footer .toTopbutton:after {
@@ -754,7 +861,11 @@ footer {
       background: url("../images/totoparrow.png");
       position: absolute;
       top: 12px;
-      transform: translate(-50%, 50%);
+      -webkit-transform: translate(-50%);
+      -moz-transform: translate(-50%);
+      -o-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+      transform: translate(-50%);
       height: 13px;
       width: 14px; }
   footer ul.footer-menu li {

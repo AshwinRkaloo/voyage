@@ -40,8 +40,8 @@ footer {
     }
 
     .bloc-news {
-        display: flex;
-        align-items: flex-start;
+        @include flexbox();
+        @include align-items(flex-start);
         margin: 20px 0;
         &-img {
             outline: 1px solid map-get($colors, white);
@@ -89,7 +89,7 @@ footer {
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translate(-50%);
+        @include transform(translate(-50%));
         box-sizing: border-box;
 
         &:after {
@@ -97,7 +97,7 @@ footer {
             background: url('../images/totoparrow.png');
             position: absolute;
             top: 12px;
-            transform: translate(-50%, 50%);
+            @include transform(translate(-50%));
             height: 13px;
             width: 14px;
         }

@@ -1,6 +1,6 @@
 .holidays_type {
     background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)), url('../images/holiday_type_bg.png') no-repeat;
-    filter: grayscale(50%);
+    @include filter(grayscale(50%));
     background-size: cover;
     background-position: 0 31%;
     height: 350px;
@@ -19,7 +19,7 @@
 
     &-category {
         @include border-radius(50%);
-        border: 5px solid #fff;
+        border: 5px solid map-get($colors, white);
         background: transparent;
         height: 150px;
         width: 150px;
@@ -30,7 +30,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            @include transform(translate(-50%, -50%));
         }
 
         &-name {
@@ -41,7 +41,6 @@
             
         }
     }
-
     
 }
 
@@ -56,6 +55,7 @@
         .bloc-text {
             margin: 20px;
         }
+        
         &-category {
             width: 110px;
             height: 110px;

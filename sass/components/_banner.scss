@@ -1,7 +1,7 @@
 .banner {
     background-size: cover;
     height: 800px;
-    color: #fff;
+    color: map-get($colors, white);
     position: relative;
 
     .banner-slider-bloc {
@@ -24,10 +24,10 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                @include transform(translate(-50%, -50%));
         
                 .banner_subtitle {
-                    color: #fff;
+                    color: map-get($colors, white);
                     font-size: 32px;
                     font-weight: 300;
                 }

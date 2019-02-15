@@ -12,7 +12,7 @@
     }
 
     .slider-testimonials {
-        display: flex;
+        @include flexbox();
         margin-top: 50px;
 
         .slides {
@@ -30,8 +30,8 @@
                 height: 48px;
                 right: 12%;
                 bottom: -24px;
-                transform: rotate(53deg);                
-                box-shadow: 1px 1px map-get($colors, pale_bg);
+                @include transform(rotate(53deg));
+                @include box-shadow(1px, 1px, 0, map-get($colors, pale_bg));
                 background: inherit;
             }
 
@@ -43,15 +43,15 @@
                 opacity: 1;
 
                 p {
-                    transform: translateY(-2px);
+                    @include transform(translateY(-2px)); 
                 }
 
                 &:after {
                     width: 48px;
                     height: 36px;
                     bottom: -17px;
-                    transform: rotate(36deg);
-                    box-shadow: 1px 1px map-get($colors, blue_text);
+                    @include transform(rotate(36deg));
+                    @include box-shadow(1px, 1px, 0, map-get($colors, list-sep));
                 }
             }
 
@@ -80,6 +80,7 @@
 
     .bx-wrapper {
         border: 0;
+        
         box-shadow: none;
         height: 250px;
     }

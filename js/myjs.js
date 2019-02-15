@@ -6,16 +6,23 @@ $('.toggle').click(function() {
 
 
 /* ACTIVATE SEARCH BAR */
+var input = $('.input-search');
+var ifClicked = true;
 
-$('.nav-search').on("click", ".search-toggle", function() {
-    $('.input-search').toggleClass('show');
-    $('.input-search').addClass('animated bounceInRight');
-    (this).css('backgroundImage', 'url(images/close.png)');
-    // var src = ($(this).attr('src') === 'images/search.png')
-    // ? 'images/close.png'
-    // : 'images/search.png';
-    // $(this).attr('src', src);
-})
+$('.nav-search').on("click", ".search-toggle", function() {  
+    $(this).toggleClass("active");
+    
+    if (ifClicked) {
+        input.removeClass('bounceOutLeft').addClass('show bounceInRight');        
+        ifClicked = false;        
+    }
+    else {
+        input.removeClass('bounceInRight').addClass('bounceOutLeft');
+        ifClicked = true;        
+    }
+});
+
+
 
 
 /* TO TOP BUTTON */
