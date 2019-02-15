@@ -5,16 +5,8 @@
     position: relative;
 
     .banner-slider-bloc {
-
-        .slide1 {
-            background-image: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner.png');
-        }
-
-        .slide2 {
-            background-image: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/banner2.jpg');
-        }
         
-        .slide1, .slide2 {
+        .slide {
 
             height: 800px;
             background-size: cover;
@@ -46,7 +38,6 @@
             }            
     
         }
-        
         
         
     }

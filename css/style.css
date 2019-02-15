@@ -395,15 +395,11 @@ button, .nav-search, .toTopbutton {
   height: 800px;
   color: #fff;
   position: relative; }
-  .banner .banner-slider-bloc .slide1 {
-    background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner.png"); }
-  .banner .banner-slider-bloc .slide2 {
-    background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("../images/banner2.jpg"); }
-  .banner .banner-slider-bloc .slide1, .banner .banner-slider-bloc .slide2 {
+  .banner .banner-slider-bloc .slide {
     height: 800px;
     background-size: cover;
     background-repeat: no-repeat; }
-    .banner .banner-slider-bloc .slide1 .text-bloc, .banner .banner-slider-bloc .slide2 .text-bloc {
+    .banner .banner-slider-bloc .slide .text-bloc {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -412,13 +408,13 @@ button, .nav-search, .toTopbutton {
       -o-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-      .banner .banner-slider-bloc .slide1 .text-bloc .banner_subtitle, .banner .banner-slider-bloc .slide2 .text-bloc .banner_subtitle {
+      .banner .banner-slider-bloc .slide .text-bloc .banner_subtitle {
         color: #fff;
         font-size: 32px;
         font-weight: 300; }
-      .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc {
+      .banner .banner-slider-bloc .slide .text-bloc .cta-bloc {
         margin: 60px 0; }
-        .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton {
+        .banner .banner-slider-bloc .slide .text-bloc .cta-bloc .mybutton {
           padding: 10px 15px;
           background: transparent;
           border: 2px solid #fff;
@@ -429,10 +425,10 @@ button, .nav-search, .toTopbutton {
           text-transform: uppercase;
           cursor: pointer;
           text-decoration: none; }
-          .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton:active, .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton:hover, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton:active, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton:hover {
+          .banner .banner-slider-bloc .slide .text-bloc .cta-bloc .mybutton:active, .banner .banner-slider-bloc .slide .text-bloc .cta-bloc .mybutton:hover {
             background: #1dd2af;
             border-color: #1dd2af; }
-          .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton.active, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton.active {
+          .banner .banner-slider-bloc .slide .text-bloc .cta-bloc .mybutton.active {
             background: #1dd2af;
             border: 2px solid #1dd2af; }
 
