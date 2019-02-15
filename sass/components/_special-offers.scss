@@ -27,7 +27,7 @@
             @include border-radius(5px);
             width: 15%;
             background: map-get($colors, pale_bg);
-            @include transition(background, 0.2s, ease-out);
+            @include transition(all, 0.2s, ease-out);
 
             &:hover {
                 @include transform(scale(1.1));
