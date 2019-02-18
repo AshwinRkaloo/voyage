@@ -396,9 +396,16 @@ button, .nav-search, .toTopbutton {
   color: #fff;
   position: relative; }
   .banner .banner-slider-bloc .slide {
+    position: relative;
     height: 800px;
     background-size: cover;
     background-repeat: no-repeat; }
+    .banner .banner-slider-bloc .slide:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)); }
     .banner .banner-slider-bloc .slide .text-bloc {
       position: absolute;
       top: 50%;
@@ -434,12 +441,14 @@ button, .nav-search, .toTopbutton {
 
 /* ------------------------------------ MEDIA QUERIES ----------------------------------------------------------- */
 @media only screen and (max-width: 640px) {
-  .banner .banner-slider-bloc .slide1 .text-bloc .cta-bloc .mybutton, .banner .banner-slider-bloc .slide2 .text-bloc .cta-bloc .mybutton {
+  .banner .banner-slider-bloc .slide .text-bloc .cta-bloc .mybutton {
     display: block;
     margin: 20px 0; }
-  .banner .banner-slider-bloc .text-bloc h1 {
+  .banner .banner-slider-bloc .banner .banner-slider-bloc
+  .text-bloc h1 {
     font-size: 56px; }
-  .banner .banner-slider-bloc .text-bloc p.banner_subtitle {
+  .banner .banner-slider-bloc .banner .banner-slider-bloc
+  .text-bloc p.banner_subtitle {
     font-weight: 28px; } }
 .holidays_pack {
   background: #2c3e50;
